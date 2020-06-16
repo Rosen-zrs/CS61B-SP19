@@ -8,8 +8,8 @@ public class OomageTestUtility {
         int num = oomages.size();
 
         for (Oomage om : oomages) {
-            int backet_index = (om.hashCode() & 0x7FFFFFFF) % M;
-            backets[backet_index] += 1;
+            int index = (om.hashCode() & 0x7FFFFFFF) % M;
+            backets[index] += 1;
         }
 
         for (int b : backets) {
